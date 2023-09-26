@@ -37,7 +37,7 @@
                 <div class="heading">
                     <h2>Hire Me</h2>
                 </div>
-                <form name="submit-to-google-sheet">
+                <form action="https://formsubmit.co/437d3020d478e85f3d40417e02eef745" method="POST">
                     <div class="form-group"><label for="Name">Name</label><input class="form-control" type="text" name="Name" id="name"></div>
                     <div class="form-group"><label for="email">Email</label><input class="form-control" type="email" name="Email" id="email"></div>
                     <div class="form-group"><label for="message">Message</label><textarea class="form-control" id="message" name="Message"></textarea></div>
@@ -51,6 +51,7 @@
                 </form>
             </div>
         </section>
+        
     </main>
     <footer class="page-footer">
         <div class="container">
@@ -58,24 +59,7 @@
             <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
         </div>
     </footer>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyr6F0MRcwkd72n2XITuQmeyUPIXRXIl4d6naBW-qFFa5fSeOh-xcMxX2IwmwKlVPmE/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById('msg')
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message Sent Successfully"
-                setTimeout(function () {
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+   
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
